@@ -33,7 +33,7 @@ public class DeyDamSignupTest {
         driver.manage().window().maximize();
         Thread.sleep(5000);
         //4. Click on Create new account button to open the sign up page
-        //Test2. Verify that when the user clicks on the signup button, the user is directed to the signup page
+        //Test1. Verify that when the user clicks on the signup button, the user is directed to the signup page
         driver.findElement(By.xpath("/html/body/div/div/div/div/main/div/div[2]/div/div/div/div[2]/div[4]/a")).click();
         String expectedUrl = "https://www.deydam.com/signup?ref=null";
         String actualUrl = driver.getCurrentUrl();
@@ -49,7 +49,7 @@ public class DeyDamSignupTest {
     @Test(priority = 0)
     public void negativeUsername() throws InterruptedException {
         //5. Input your username in the username field
-        //Test3. Verify that user cannot sign up with username less than 4 characters
+        //Test2. Verify that user cannot sign up with username less than 4 characters
         driver.findElement(By.id("username")).sendKeys("Ayoola");
         Thread.sleep(5000);
         //6. Input email address in the email address field
@@ -69,22 +69,22 @@ public class DeyDamSignupTest {
 
     @Test(priority = 1)
     public void negativeEmail() throws InterruptedException {
-        //5. Input your username in the username field
+        //10. Input your username in the username field
         driver.findElement(By.id("username")).sendKeys("Ayoola");
         Thread.sleep(5000);
         driver.findElement(By.id("email")).clear();
-        //6. Input email address in the email address field
-        //Test4. Verify that user cannot sign up with invalid email address
+        //11. Input email address in the email address field
+        //Test3. Verify that user cannot sign up with invalid email address
         driver.findElement(By.id("email")).sendKeys("Ayoolamailinator.com");
         Thread.sleep(5000);
-        //7. Input password in password field
+        //12. Input password in password field
         driver.findElement(By.id("password")).clear();
         driver.findElement(By.id("password")).sendKeys("Motunrayo");
-        //8. Input password in the confirm password field
+        //13. Input password in the confirm password field
         driver.findElement(By.id("confirmPassword")).clear();
         driver.findElement(By.id("confirmPassword")).sendKeys("Motunrayo");
         Thread.sleep(5000);
-        //9. Click the create account button
+        //14. Click the create account button
         driver.findElement(By.xpath("/html/body/div/div/div/div/main/div/div[2]/div/div/div/div[2]/div/div/form/button")).click();
         Thread.sleep(5000);
         driver.findElement(By.id("username")).clear();
@@ -92,22 +92,22 @@ public class DeyDamSignupTest {
 
     @Test(priority = 2)
     public void negativePassword() throws InterruptedException {
-        //5. Input your username in the username field
+        //15. Input your username in the username field
         driver.findElement(By.id("username")).sendKeys("Ayoola");
         Thread.sleep(5000);
-        //6. Input email address in the email address field
+        //16. Input email address in the email address field
         driver.findElement(By.id("email")).clear();
         driver.findElement(By.id("email")).sendKeys("Ayoola@mailinator.com");
         Thread.sleep(5000);
-        //7. Input password in password field
-        //Test5. Verify that user cannot sign up with password less than 8 characters
+        //17. Input password in password field
+        //Test4. Verify that user cannot sign up with password less than 8 characters
         driver.findElement(By.id("password")).clear();
         driver.findElement(By.id("password")).sendKeys("Motunrayo");
-        //8. Input password in the confirm password field
+        //18. Input password in the confirm password field
         driver.findElement(By.id("confirmPassword")).clear();
         driver.findElement(By.id("confirmPassword")).sendKeys("Motunrayo11");
         Thread.sleep(5000);
-        //9. Click the create account button
+        //19. Click the create account button
         driver.findElement(By.xpath("/html/body/div/div/div/div/main/div/div[2]/div/div/div/div[2]/div/div/form/button")).click();
         Thread.sleep(5000);
         driver.findElement(By.id("username")).clear();
@@ -115,22 +115,22 @@ public class DeyDamSignupTest {
 
     @Test(priority = 3)
     public void negativeEmpty() throws InterruptedException {
-        //5. Input your username in the username field
+        //20. Input your username in the username field
         driver.findElement(By.id("username")).sendKeys("Ayoola");
         Thread.sleep(5000);
-        //6. Input email address in the email address field
-        //Test6. Verify that user cannot sign up with any field blank
+        //21. Input email address in the email address field
+        //Test5. Verify that user cannot sign up with any field blank
         driver.findElement(By.id("email")).clear();
         driver.findElement(By.id("email")).sendKeys("");
         Thread.sleep(5000);
-        //7. Input password in password field
+        //22. Input password in password field
         driver.findElement(By.id("password")).clear();
         driver.findElement(By.id("password")).sendKeys("Motunrayo");
-        //8. Input password in the confirm password field
+        //23. Input password in the confirm password field
         driver.findElement(By.id("confirmPassword")).clear();
         driver.findElement(By.id("confirmPassword")).sendKeys("Motunrayo");
         Thread.sleep(5000);
-        //9. Click the create account button
+        //24. Click the create account button
         driver.findElement(By.xpath("/html/body/div/div/div/div/main/div/div[2]/div/div/div/div[2]/div/div/form/button")).click();
         Thread.sleep(5000);
         driver.findElement(By.id("username")).clear();
@@ -138,22 +138,22 @@ public class DeyDamSignupTest {
 
     @Test(priority = 4)
     public void positiveSignup() throws InterruptedException {
-        //Test8. Verify that user is successfully signed up when valid details are used
-        //5. Input your username in the username field
+        //Test6. Verify that user is successfully signed up when valid details are used
+        //25. Input your username in the username field
         driver.findElement(By.id("username")).sendKeys("Motunrayo904");
         Thread.sleep(5000);
-        //6. Input email address in the email address field
+        //26. Input email address in the email address field
         driver.findElement(By.id("email")).clear();
         driver.findElement(By.id("email")).sendKeys("Motunrayo904@mailinator.com");
         Thread.sleep(5000);
-        //7. Input password in password field
+        //27. Input password in password field
         driver.findElement(By.id("password")).clear();
         driver.findElement(By.id("password")).sendKeys("passwords");
-        //8. Input password in the confirm password field
+        //28. Input password in the confirm password field
         driver.findElement(By.id("confirmPassword")).clear();
         driver.findElement(By.id("confirmPassword")).sendKeys("passwords");
         Thread.sleep(5000);
-        //9. Click the create account button
+        //29. Click the create account button
         driver.findElement(By.xpath("/html/body/div/div/div/div/main/div/div[2]/div/div/div/div[2]/div/div/form/button")).click();
         Thread.sleep(5000);
         driver.findElement(By.id("username")).clear();
@@ -161,7 +161,7 @@ public class DeyDamSignupTest {
 
     @AfterTest
     public void closeBrowser() {
-        //9. Quit the browser
+        //30. Quit the browser
         driver.quit();
     }
 }
