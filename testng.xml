@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="All Test Suite"><test verbose="2" preserve-order="true" name="C:/Users/TESTIFY LIMITED/Documents/DayDemWebSignupTest"><classes/>
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="C:/Users/TESTIFY LIMITED/Documents/DayDemWebSignupTest">
+        <classes>
+            <class name="DeyDamSignupTest">
+                <methods>
+                    <include name="negativeUsername"/>
+                    <include name="negativeEmail"/>
+                    <include name="negativePassword"/>
+                    <include name="negativeEmpty"/>
+                    <include name="positiveSignup"/>
+                </methods>
+            </class>
+        </classes>
 </test>
 </suite>
