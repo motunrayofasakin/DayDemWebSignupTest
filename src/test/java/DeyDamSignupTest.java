@@ -50,7 +50,7 @@ public class DeyDamSignupTest {
     public void negativeUsername() throws InterruptedException {
         //5. Input your username in the username field
         //Test2. Verify that user cannot sign up with username less than 4 characters
-        driver.findElement(By.id("username")).sendKeys("Ayoola");
+        driver.findElement(By.id("username")).sendKeys("Ay");
         Thread.sleep(5000);
         //6. Input email address in the email address field
         driver.findElement(By.id("email")).sendKeys("Ayoola@mailinator.com");
